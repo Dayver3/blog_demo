@@ -1,0 +1,26 @@
+{
+    "name": "yar/blog_demo",
+    "description": "yar test application",
+    "minimum-stability": "dev",
+    "license": "GPL-3.0+",
+    "authors": [
+        {
+            "name": "Yar",
+            "email": "yar.yason@gmail.com"
+        }
+    ],
+    "config": {
+        "vendor-dir": "system/vendor/"
+    },
+    "autoload": {
+        "psr-4": {
+            "Application\\": "app/",
+            "Application\\engine\\": "system/engine",
+            "Application\\core\\": "system/core",
+            "Application\\controller\\": "app/controller",
+            "Application\\controller\\account\\": "app/controller/account",
+            "Application\\controller\\layout\\": "app/controller/layout"
+        }
+
+    }
+}

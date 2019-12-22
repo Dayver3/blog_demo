@@ -2,41 +2,48 @@
 
 namespace Application;
 
-use Application\core;
-use Application\controller;
+use Application\engine;
 
-final class App
+class App
 {
-    private $registry;
 
-    public static function init()
+    public static function init($config)
     {
-        $app = new static;
+        $app = core\App::getInstance();
 
-        /**  Registry init  */
-        $registry = new core\Registry();
-        $app->registry = $registry;
+        /**  Config init  */
+        $conf = new engine\Config();
+        $app->set('config', $conf);
+
+        /** Request init */
+        $request = new engine\Request();
+        $app->set('request', $request);
 
         /**  Response init  */
-        $response = new core\Response();
-        $app->registry->set('response', $response);
+        $response = new engine\Response();
+        $app->set('response', $response);
 
+        /** User init */
+        $user = new engine\User();
+        $app->set('user', $user);
 
-        return $app;
+        return new static();
     }
 
-    public static function run()
+    public function run()
     {
+        session_start();
+
         $route = $_SERVER['REQUEST_URI'];
 
         if (!$route || $route == '/' || $route == '/home') {
-            $route = new core\Route('home');
+            $route = new engine\Route('index');
         } else {
-            $route = new core\Route($route);
+            $route = new engine\Route($route);
         }
 
-        $front = core\Front::getInstance();
-        $front->execute($route);
-        var_dump($route);
+        $app = core\App::getInstance();
+        $app->execute($route);
+        $app->get('response')->send();
     }
 }
