@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/app/controller/layout" isTestSource="false" packagePrefix="Application\controller\layout\" />
+      <sourceFolder url="file://$MODULE_DIR$/app/controller" isTestSource="false" packagePrefix="Application\controller\" />
+      <sourceFolder url="file://$MODULE_DIR$/system/core" isTestSource="false" packagePrefix="Application\core\" />
+      <sourceFolder url="file://$MODULE_DIR$/app/controller/account" isTestSource="false" packagePrefix="Application\controller\account\" />
+      <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" packagePrefix="Application\" />
+      <sourceFolder url="file://$MODULE_DIR$/system/engine" isTestSource="false" packagePrefix="Application\engine\" />
+      <sourceFolder url="file://$MODULE_DIR$/app/model" isTestSource="false" packagePrefix="Application\model\" />
+      <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/system/vendor/composer" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

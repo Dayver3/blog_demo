@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d8438ae3-ff92-4799-ae3c-dd15e5ef9274" name="Default Changelist" comment="message">
+      <change afterPath="$PROJECT_DIR$/.idea/blog_demo.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.phar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/vendor/autoload.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/vendor/composer/ClassLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/vendor/composer/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/vendor/composer/autoload_classmap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/vendor/composer/autoload_namespaces.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/vendor/composer/autoload_psr4.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/vendor/composer/autoload_real.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/vendor/composer/autoload_static.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/system/vendor/composer/installed.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/account/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/account/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/UsersModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/UsersModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/system/engine/Db.php" beforeDir="false" afterPath="$PROJECT_DIR$/system/engine/Db.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <phar pharPath="C:\wamp\www\blog_demo\composer.phar" interpreterId="6ea20245-c070-46b6-94d2-424d7a7051e0" />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpDebugGeneral" break_at_first_line="true" />
+  <component name="PhpServers">
+    <servers>
+      <server host="blog-demo" id="ecd50eaf-260a-491e-b1ee-31e37116e197" name="blog-demo" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP(7.3)">
+    <include_path>
+      <path value="$PROJECT_DIR$/system/vendor/composer" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1VNMDg3liy9s3P6AdY0gRzOXk2K" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Constants" value="false" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.composer" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\blog_demo\app\view\account" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d8438ae3-ff92-4799-ae3c-dd15e5ef9274" name="Default Changelist" comment="" />
+      <created>1577088981020</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577088981020</updated>
+      <workItem from="1577088985201" duration="818000" />
+      <workItem from="1577089827116" duration="408000" />
+      <workItem from="1577090265712" duration="30338000" />
+    </task>
+    <task id="LOCAL-00001" summary="message">
+      <created>1577122424468</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577122424469</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="message" />
+    <option name="LAST_COMMIT_MESSAGE" value="message" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="92" y="18" key="#CLI_Interpreters" timestamp="1577090224139">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="92" y="18" key="#CLI_Interpreters/0.0.1024.728@0.0.1024.728" timestamp="1577090224139" />
+    <state x="104" y="21" key="#Notifications" timestamp="1577090132920">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="104" y="21" key="#Notifications/0.0.1024.728@0.0.1024.728" timestamp="1577090132920" />
+    <state x="137" y="0" key="CommitChangelistDialog2" timestamp="1577122422913">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="137" y="0" key="CommitChangelistDialog2/0.0.1024.728@0.0.1024.728" timestamp="1577122422913" />
+    <state x="291" y="105" key="FileChooserDialogImpl" timestamp="1577114470693">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="291" y="105" key="FileChooserDialogImpl/0.0.1024.728@0.0.1024.728" timestamp="1577114470693" />
+    <state width="980" height="112" key="GridCell.Tab.0.bottom" timestamp="1577124853605">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="112" key="GridCell.Tab.0.bottom/0.0.1024.728@0.0.1024.728" timestamp="1577124853605" />
+    <state width="980" height="112" key="GridCell.Tab.0.center" timestamp="1577124853605">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="112" key="GridCell.Tab.0.center/0.0.1024.728@0.0.1024.728" timestamp="1577124853605" />
+    <state width="980" height="112" key="GridCell.Tab.0.left" timestamp="1577124853604">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="112" key="GridCell.Tab.0.left/0.0.1024.728@0.0.1024.728" timestamp="1577124853604" />
+    <state width="980" height="112" key="GridCell.Tab.0.right" timestamp="1577124853605">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="112" key="GridCell.Tab.0.right/0.0.1024.728@0.0.1024.728" timestamp="1577124853605" />
+    <state width="980" height="112" key="GridCell.Tab.1.bottom" timestamp="1577124843624">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="112" key="GridCell.Tab.1.bottom/0.0.1024.728@0.0.1024.728" timestamp="1577124843624" />
+    <state width="980" height="112" key="GridCell.Tab.1.center" timestamp="1577124843624">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="112" key="GridCell.Tab.1.center/0.0.1024.728@0.0.1024.728" timestamp="1577124843624" />
+    <state width="980" height="112" key="GridCell.Tab.1.left" timestamp="1577124843623">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="112" key="GridCell.Tab.1.left/0.0.1024.728@0.0.1024.728" timestamp="1577124843623" />
+    <state width="980" height="112" key="GridCell.Tab.1.right" timestamp="1577124843624">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="112" key="GridCell.Tab.1.right/0.0.1024.728@0.0.1024.728" timestamp="1577124843624" />
+    <state width="980" height="112" key="GridCell.Tab.2.bottom" timestamp="1577124841019">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="112" key="GridCell.Tab.2.bottom/0.0.1024.728@0.0.1024.728" timestamp="1577124841019" />
+    <state width="980" height="112" key="GridCell.Tab.2.center" timestamp="1577124841018">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="112" key="GridCell.Tab.2.center/0.0.1024.728@0.0.1024.728" timestamp="1577124841018" />
+    <state width="980" height="112" key="GridCell.Tab.2.left" timestamp="1577124841018">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="112" key="GridCell.Tab.2.left/0.0.1024.728@0.0.1024.728" timestamp="1577124841018" />
+    <state width="980" height="112" key="GridCell.Tab.2.right" timestamp="1577124841018">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state width="980" height="112" key="GridCell.Tab.2.right/0.0.1024.728@0.0.1024.728" timestamp="1577124841018" />
+    <state x="319" y="177" key="NewPhpClassDialog" timestamp="1577113577640">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="319" y="177" key="NewPhpClassDialog/0.0.1024.728@0.0.1024.728" timestamp="1577113577640" />
+    <state x="244" y="168" key="PHPComposerAddDependencyDialogDimensionKey" timestamp="1577114510292">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="244" y="168" key="PHPComposerAddDependencyDialogDimensionKey/0.0.1024.728@0.0.1024.728" timestamp="1577114510292" />
+    <state x="13" y="0" key="SettingsEditor" timestamp="1577114494339">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="13" y="0" key="SettingsEditor/0.0.1024.728@0.0.1024.728" timestamp="1577114494339" />
+    <state x="104" y="96" key="Vcs.Push.Dialog.v2" timestamp="1577122432442">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="104" y="96" key="Vcs.Push.Dialog.v2/0.0.1024.728@0.0.1024.728" timestamp="1577122432442" />
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog" timestamp="1577090272303">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="0" y="0" key="com.intellij.ide.util.TipDialog/0.0.1024.728@0.0.1024.728" timestamp="1577090272303" />
+    <state x="168" y="157" width="672" height="677" key="run.anything.popup" timestamp="1577114485307">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="168" y="157" width="672" height="677" key="run.anything.popup/0.0.1024.728@0.0.1024.728" timestamp="1577114485307" />
+    <state x="175" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1577112858645">
+      <screen x="0" y="0" width="1024" height="728" />
+    </state>
+    <state x="175" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1024.728@0.0.1024.728" timestamp="1577112858645" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/app/controller/IndexController.php</url>
+          <line>15</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/system/core/App.php</url>
+          <line>83</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/system/engine/Response.php</url>
+          <line>40</line>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/system/engine/Db.php</url>
+          <line>25</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/system/engine/Db.php</url>
+          <line>47</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/system/engine/Db.php</url>
+          <line>45</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="index.php">
+        <watch expression="$query" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

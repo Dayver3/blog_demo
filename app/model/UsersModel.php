@@ -18,15 +18,14 @@ class UsersModel extends Model
         $this->db->query("INSERT INTO `user` SET username = '" . $this->db->escape($data['username']) . "', email = '" . $this->db->escape($data['email']) . "', password = '" . $this->db->escape(password_hash($data['password'], PASSWORD_DEFAULT)) . "', date_added = NOW() ");
     }
 
-    public function getUserByEmail($email)
+//    public function getUserByEmail($email)
+////    {
+////        $query = $this->db->query("SELECT COUNT(*) as userCount FROM `user` WHERE LOWER (email) = '" . $this->db->escape(strtolower($email)) . "'");
+////    }
+
+    public function allowUserByEmail($email)
     {
-        $query = $this->db->query("SELECT * FROM `user` WHERE LOWER (email) = '" . $this->db->escape(strtolower($email)) . "'");
-
-        if ($query->num_rows) {
-            return $query->rows;
-        }
-
-        return null;
+        $query = $this->db->query("SELECT COUNT(*) as userCount FROM `user` WHERE LOWER (email) = '" . $this->db->escape(strtolower($email)) . "'");
+        return $query->row['userCount'];
     }
-
 }

@@ -26,11 +26,11 @@ class RegisterController extends Controller
             $err = 'Error: Username must be between 1 and 255 characters!';
         } elseif (strlen($this->app->get('request')->post['email']) > 96) {
             $err = 'Error: Email must be less than 96 characters!';
-        } elseif ($this->app->model('users')->getUserByEmail($this->app->get('request')->post['email'])) {
+        } elseif ($this->app->model('users')->allowUserByEmail($this->app->get('request')->post['email'])) {
             $err = 'Error: E-Mail Address is already registered!';
         } elseif ((strlen($this->app->get('request')->post['password']) < 4) || strlen($this->app->get('request')->post['passwordVerify']) > 40) {
             $err = 'Error: Password must be between 4 and 20 characters!';
-        } elseif ($this->app->get('request')->post['password'] === $this->app->get('request')->post['passwordVerify']) {
+        } elseif ($this->app->get('request')->post['password'] !== $this->app->get('request')->post['passwordVerify']) {
             $err = 'Error: Your password do not matches!';
         }
 
@@ -39,9 +39,12 @@ class RegisterController extends Controller
 
     public function applyAction()
     {
-        if ($this->app->get('request')->isPost() && !$this->validate()) {
+        $err = $this->validate();
+        if ($this->app->get('request')->isPost() && !$err) {
             $this->app->model('users')->addUser($this->app->get('request')->post);
             $this->app->get('response')->redirect($this->app->get('url')->link('register'));
+        } else {
+            echo $err;
         }
     }
 }

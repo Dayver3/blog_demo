@@ -20,6 +20,12 @@ class Db
 //        $this->connection->query("SET SQL_MODE = ''");
     }
 
+    public function queryTwo($sql)
+    {
+
+        return $this->connection->query($sql);
+    }
+
     public function query($sql)
     {
         $query = $this->connection->query($sql);
