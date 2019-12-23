@@ -34,4 +34,10 @@ class Response
         }
 
     }
+
+    public function redirect($url, $status = 302)
+    {
+        header('Location: ' . str_replace('&amp;', '&', $url), true, $status);
+        exit();
+    }
 }

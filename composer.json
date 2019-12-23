@@ -15,6 +15,7 @@
     "autoload": {
         "psr-4": {
             "Application\\": "app/",
+            "Application\\model\\": "app/model",
             "Application\\engine\\": "system/engine",
             "Application\\core\\": "system/core",
             "Application\\controller\\": "app/controller",

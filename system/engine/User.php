@@ -7,7 +7,7 @@ class User
     private $id;
     private $username;
     private $email;
-    private $role;
+//    private $role;
 
     public function __construct()
     {

@@ -1,6 +1,6 @@
 <?php
 
-const DIR_APP = __DIR__ . '/app/';
+//const DIR_APP = __DIR__ . '/app/';
 const DIR_VIEW = __DIR__ . '\\app\\view\\';
 
 return [
@@ -9,7 +9,7 @@ return [
 
     // DB
     'db_hostname' => 'localhost',
-    'db_database' => 'test',
+    'db_database' => 'demo',
     'db_username' => 'root',
     'db_password' => '',
     'db_port' => 3306

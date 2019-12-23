@@ -35,4 +35,11 @@ class Request
 
         return $data;
     }
+
+    public function isPost()
+    {
+        if ($this->server['REQUEST_METHOD'] === 'POST') {
+            return true;
+        } else return false;
+    }
 }

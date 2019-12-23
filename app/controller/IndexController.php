@@ -2,9 +2,7 @@
 
 namespace Application\controller;
 
-use Application\core\Controller,
-    Application\engine\Response,
-    Application\core\View;
+use Application\core\Controller;
 use Application\engine\Route;
 
 class IndexController extends Controller
@@ -19,11 +17,17 @@ class IndexController extends Controller
 
 //        $this->response->setOutput($this->view('home', $data));
 
+
 //        $response = new Response();
 //
 //        $view = new View();
 //
 //        $response->setOutput($view->render('home'));
 //        $this->app->set('response', $response);
+    }
+
+    public function testAction()
+    {
+        var_dump('ok');
     }
 }

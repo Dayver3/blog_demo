@@ -19,6 +19,20 @@ class App
         $request = new engine\Request();
         $app->set('request', $request);
 
+        /** db init */
+        $db = new engine\Db(
+            $config['db_hostname'],
+            $config['db_database'],
+            $config['db_username'],
+            $config['db_password'],
+            $config['db_port']
+        );
+        $app->set('db', $db);
+
+        /** Url init */
+        $url = new engine\Url('http://' . $_SERVER['HTTP_HOST'] . '/');
+        $app->set('url', $url);
+
         /**  Response init  */
         $response = new engine\Response();
         $app->set('response', $response);
@@ -35,6 +49,7 @@ class App
         session_start();
 
         $route = $_SERVER['REQUEST_URI'];
+        var_dump($route);
 
         if (!$route || $route == '/' || $route == '/home') {
             $route = new engine\Route('index');

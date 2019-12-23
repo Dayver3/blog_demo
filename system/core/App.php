@@ -2,10 +2,7 @@
 
 namespace Application\core;
 
-use Application\engine\Route,
-    Application\controller,
-    Application\controller\layout,
-    Application\controller\account;
+use Application\engine\Route;
 
 final class App
 {
@@ -67,7 +64,30 @@ final class App
             $view->set($key, $value);
         }
 
-
         return $view->render($route);
     }
+
+    public function getRegistry()
+    {
+        return $this->registry;
+    }
+
+    public function model($route)
+    {
+        $route = ucfirst($route);
+        if ($this->has($route)) {
+            return $this->get($route);
+        }
+
+        $class = 'Application\\model\\' . str_replace('/', '\\', ucwords($route)) . 'Model';
+
+        if (class_exists($class)) {
+            $this->set($route, new $class($this));
+        } else {
+            throw new \Exception('Error: Could not load model ' . $route . '!');
+        }
+
+        return $this->get($route);
+    }
+
 }

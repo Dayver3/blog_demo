@@ -13,7 +13,7 @@ class Config
 
     public function get()
     {
-
+        return $this->data;
     }
 
     public function set($key, $value)
