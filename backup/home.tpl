@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-        <?php } else { ?>
+        <?php } ?>
         <div class="container">
             <div class="card-deck text-center">
                 <div class="card bg-light col-md-3 p-0 box-shadow ml-md-auto">

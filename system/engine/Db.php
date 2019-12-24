@@ -20,12 +20,6 @@ class Db
 //        $this->connection->query("SET SQL_MODE = ''");
     }
 
-    public function queryTwo($sql)
-    {
-
-        return $this->connection->query($sql);
-    }
-
     public function query($sql)
     {
         $query = $this->connection->query($sql);
@@ -43,13 +37,14 @@ class Db
                 $result->row = isset($data[0]) ? $data[0] : [];
                 $result->rows = $data;
 
-                $query->close();
 
                 return $result;
             }
 
             return true;
         }
+
+        return false;
     }
 
     public function escape($value)

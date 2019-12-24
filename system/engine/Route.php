@@ -30,6 +30,10 @@ class Route
                 $class = 'Application\\controller\\account\\' . implode('\\', array_map('ucfirst', $parts)) . 'Controller';
             }
 
+            if (!class_exists($class)) {
+                $class = 'Application\\controller\\content\\' . implode('\\', array_map('ucfirst', $parts)) . 'Controller';
+            }
+
             if (class_exists($class)) {
                 $this->controller = $class;
                 $parts = [];

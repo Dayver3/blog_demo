@@ -9,6 +9,7 @@ class App
 
     public static function init($config)
     {
+        session_start();
         $app = core\App::getInstance();
 
         /**  Config init  */
@@ -38,7 +39,7 @@ class App
         $app->set('response', $response);
 
         /** User init */
-        $user = new engine\User();
+        $user = new engine\User($db);
         $app->set('user', $user);
 
         return new static();
@@ -46,7 +47,7 @@ class App
 
     public function run()
     {
-        session_start();
+
 
         $route = $_SERVER['REQUEST_URI'];
         var_dump($route);

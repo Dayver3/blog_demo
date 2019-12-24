@@ -10,10 +10,29 @@ class IndexController extends Controller
     public function indexAction()
     {
         $data = [];
+
+        $data['logged'] = $this->app->get('user')->isLogged();
+        $data['username'] = $this->app->get('user')->getUsername();
+
+        if (isset($_SESSION['error'])) {
+            $data['error'] = $_SESSION['error'];
+            unset($_SESSION['error']);
+        } else {
+            $data['error'] = '';
+        }
+
+        $data['topics'] = $this->app->model('topic')->getTopics();
+
+        $data['total_topics'] = $this->app->model('topic')->getTotalTopics();
+//        $data['total_users'] = $this->app->model('users')->getTotalUsers();
+//        $data['total_comments'] = $this->app->model('comment')->getTotalComments();
+
         $data['header'] = $this->app->execute(new Route('header'));
         $data['footer'] = $this->app->execute(new Route('footer'));
 
         $this->app->get('response')->setOutput($this->app->view('home', $data));
+
+
 
 //        $this->response->setOutput($this->view('home', $data));
 

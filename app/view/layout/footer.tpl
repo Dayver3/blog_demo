@@ -1,8 +1,5 @@
 <footer class="footer bg-light border-top">
-    <div class="container">
-        <span class="text-muted float-right">Powered by <a href="https://github.com/ionscript" target="_blank">ionscript</a></span>
-        <span>Guest Book &copy; <?php echo date('Y'); ?></span>
-    </div>
+
 </footer>
 
 <!-- Vendor scripts -->

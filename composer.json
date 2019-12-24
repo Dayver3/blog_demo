@@ -20,7 +20,8 @@
             "Application\\core\\": "system/core",
             "Application\\controller\\": "app/controller",
             "Application\\controller\\account\\": "app/controller/account",
-            "Application\\controller\\layout\\": "app/controller/layout"
+            "Application\\controller\\layout\\": "app/controller/layout",
+            "Application\\controller\\content\\": "app/controller/content"
         }
 
     }
