@@ -9,6 +9,7 @@
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" packagePrefix="Application\" />
       <sourceFolder url="file://$MODULE_DIR$/system/engine" isTestSource="false" packagePrefix="Application\engine\" />
       <sourceFolder url="file://$MODULE_DIR$/app/model" isTestSource="false" packagePrefix="Application\model\" />
+      <sourceFolder url="file://$MODULE_DIR$/app/controller/content" isTestSource="false" packagePrefix="Application\controller\content\" />
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/system/vendor/composer" />
