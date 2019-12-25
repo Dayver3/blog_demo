@@ -26,14 +26,12 @@ class TopicController extends Controller
     {
         $data = $this->app->get('request')->post;
         $data ['user_id'] = $this->app->get('user')->getId();
+        $data['username'] = $this->app->get('user')->getUsername();
 
         $this->app->model('topic')->addTopic($data);
 
-        $data['header'] = $this->app->execute(new Route('header'));
-        $data['footer'] = $this->app->execute(new Route('footer'));
-        $data['logged'] = $this->app->get('user')->isLogged();
 
-        $this->app->get('response')->setOutput($this->app->view('home', $data));
+        $this->app->get('response')->redirect($this->app->get('url')->link('home'));
     }
 
     public function getListAction()
@@ -91,4 +89,20 @@ class TopicController extends Controller
 
         $this->response->setOutput( $this->app->view('topic/view', $data));
     }
+
+    public function addCommentAction ()
+    {
+//        var_dump($this->app->get('request')->get);
+//        $data = $this->app->get('request')->post + $this->app->get('request')->get;
+        var_dump($this->app->get('request')->post);
+        var_dump($_POST);
+        var_dump($_GET);
+        var_dump($this->app->get('request')->get);
+
+//        $this->app->model('comment')->addComment();
+
+
+//        $this->app->get('response')->redirect($this->app->get('url')->link('home'));
+    }
+
 }

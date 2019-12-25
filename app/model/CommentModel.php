@@ -10,7 +10,7 @@ class CommentModel extends Model
 {
     public function addComment($data)
     {
-        $sql = "INSERT INTO `comment` SET `post_id` = '" . (int)$data['post_id'] . "', `user_id` = '" . (int) $data['user_id'] . "', `author` = '" . $this->db->escape($data['author']) . "', `text` = '" . $this->db->escape(strip_tags($data['text'])) . "', `date_added` = NOW()";
+        $sql = "INSERT INTO `comment` SET `post_id` = '" . (int)$data['post_id'] . "', `user_id` = '" . (int) $data['user_id'] . "', `author` = '" . $this->db->escape($data['author']) . "', `text` = '" . $this->db->escape(strip_tags($data['comment'])) . "', `date_added` = NOW()";
 
         $this->db->query($sql);
     }

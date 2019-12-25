@@ -47,10 +47,7 @@ class App
 
     public function run()
     {
-
-
         $route = $_SERVER['REQUEST_URI'];
-        var_dump($route);
 
         if (!$route || $route == '/' || $route == '/home') {
             $route = new engine\Route('index');

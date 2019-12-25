@@ -12,9 +12,12 @@ class LoginController extends Controller
     {
         $data = [];
         $data['error'] = $this->error;
+        $data['url'] = $this->app->get('url');
 
         $data['header'] = $this->app->execute(new Route('header'));
         $data['footer'] = $this->app->execute(new Route('footer'));
+
+
 
         $this->app->get('response')->setOutput($this->app->view('account/login', $data));
     }

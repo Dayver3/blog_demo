@@ -12,7 +12,13 @@ class IndexController extends Controller
         $data = [];
 
         $data['logged'] = $this->app->get('user')->isLogged();
-        $data['username'] = $this->app->get('user')->getUsername();
+//        $data['logged'] ? $data['username'] = $this->app->get('user')->getUsername() : $data['username'] = 'Guest';
+            if ($data['logged']) {
+              $data['username'] = $this->app->get('user')->getUsername();
+              $data['user_id'] = $this->app->get('user')->getId();
+            } else {
+                $data['username'] = 'Guest';
+            }
 
         if (isset($_SESSION['error'])) {
             $data['error'] = $_SESSION['error'];
@@ -20,10 +26,9 @@ class IndexController extends Controller
         } else {
             $data['error'] = '';
         }
-
         $data['topics'] = $this->app->model('topic')->getTopics();
-
-        $data['total_topics'] = $this->app->model('topic')->getTotalTopics();
+        $data['comments'] = $this->app->model('comment')->getComments();
+//        $data['comment'] = $this->app->model('topic')->getComments();
 //        $data['total_users'] = $this->app->model('users')->getTotalUsers();
 //        $data['total_comments'] = $this->app->model('comment')->getTotalComments();
 

@@ -16,7 +16,7 @@ class User
             $this->id = $_SESSION['user']['id'];
             $this->username = $_SESSION['user']['username'];
         }
-        var_dump($_SESSION);
+
     }
 
     public function login($data)
