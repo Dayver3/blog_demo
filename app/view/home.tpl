@@ -27,6 +27,10 @@ echo $header;
             <form action="login" method="post">
                 <div><input type="submit" value="Login" class="submit"></div>
             </form>
+            <br>
+            <form action="register" method="post">
+                <div><input type="submit" value="Register" class="submit"></div>
+            </form>
         </div>
     </div>
     <?php } ?>
@@ -35,27 +39,31 @@ echo $header;
 if ($topics) {
     foreach ($topics as $topic) {
 ?>
-        <div class="topicBlock">
+        <div class="topicBlock" id="<?php echo $topic['id'] ?>">
             <h2><?php echo $topic['title'] ?></h2>
-            <p><?php echo $topic['content']?></p>
-
+            <p><?php echo $topic['content'] ?></p>
             <hr class="line">
             <h3>Comments:</h3>
             <br>
             <?php foreach ($comments as $comment) { ?>
             <?php if($comment['post_id'] == $topic['id']) { ?>
-            <h5><?php echo $comment['author'] ?>:</h5>
-            <p><?php echo $comment['text'] ?></p>
+            <div class="homeCommentDiv">
+                <h5><?php echo $comment['author'] ?>:</h5>
+                <p class="addedDate"><?php echo $comment['date_added'] ?></p>
+                <p><?php echo $comment['text'] ?></p>
+                <br>
+            </div>
+
             <?php }
-                } ?>
-            <?php if ($logged) { ?>
+                }
+            if ($logged) { ?>
             <hr class="line">
             <br>
             Add Comment
-            <form method="post"
+            <form method="post" class="homeCommentForm"
                   action="comment/addComment?post_id=<?php echo $topic['id'] ?>&user_id=<?php echo $user_id ?>&author=<?php echo$username ?>">
-                <input type="text" name="comment">
-                <input type="submit" class="topicFormBack" value="Submit">
+                <input type="text" name="comment" id="<?php echo $topic['id'] ?>" class="commentInput">
+                <input type="button" class="homeCommentSubmit" value="Submit">
             </form>
 
             <?php } ?>

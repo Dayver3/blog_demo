@@ -9,8 +9,9 @@ class RegisterController extends Controller
 {
     public function indexAction()
     {
+        $err = '';
         $data = [];
-
+        $data['err'] = $err;
         //Layout
         $data['header'] = $this->app->execute(new Route('header'));
         $data['footer'] = $this->app->execute(new Route('footer'));
@@ -42,9 +43,11 @@ class RegisterController extends Controller
         $err = $this->validate();
         if ($this->app->get('request')->isPost() && !$err) {
             $this->app->model('users')->addUser($this->app->get('request')->post);
-            $this->app->get('response')->redirect($this->app->get('url')->link('register'));
+            $this->app->get('response')->redirect($this->app->get('url')->link('home'));
         } else {
+            $this->app->get('response')->redirect($this->app->get('url')->link('register'));
             echo $err;
         }
+
     }
 }

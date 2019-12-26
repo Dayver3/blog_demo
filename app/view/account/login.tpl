@@ -10,13 +10,7 @@ if($error) {
 
     <div class="row">
         <div class="loginPanelWrap">
-            <div class="alert alert-warning" role="alert" style="display: none" id="warning">
-                Email or password is wrong!
-            </div>
-            <div class="alert alert-success" role="alert" style="display: none" id="success">
-                Success!
-            </div>
-            <div class="alert alert-danger alert-dismissible" style="display: none" role="alert" id="error"></div>
+
             <div class="loginPanel">
                 <form name="loginForm" method="post" class="loginForm" action="/login/apply">
                     <div class="textWrap">
@@ -46,6 +40,5 @@ if($error) {
             </div>
         </div>
     </div>
-
 </div>
 <?php echo $footer ?>

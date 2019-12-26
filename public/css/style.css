@@ -194,5 +194,71 @@ p {
 
 .topicFormTextInput {
     width: 30%;
+}
+
+.registerMenu {
+    width: 500px;
+    background-color: white;
+    margin: 2% auto 3%;
+    padding: 20px 20px 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5)
+}
+
+.registerMenuWrap {
+
+    margin: 2% auto 3%;
+    padding-left: 10px;
+}
+
+.registerRow {
+    display: flex;
+    background-color: #dbe2df;
+
+    width: 101vw;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5)
+}
+
+.registerInput {
+    width: 100%;
+    margin-top: 7px;
+    padding-left: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 3px;
+    border: 1px solid rgba(186, 182, 182, 0.58);
+}
+
+.addedDate {
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+.commentInput {
+    width: 40%;
+    margin-top: 7px;
+    padding-left: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 3px;
+    border: 1px solid rgba(186, 182, 182, 0.58);
+}
+
+.homeCommentSubmit {
+    width: 10%;
+    padding: 8px;
+    margin: 2% 3% 3% auto;
+    background-color: #5d95e6;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.homeCommentDiv {
+
+}
+
+.homeCommentForm {
 
 }

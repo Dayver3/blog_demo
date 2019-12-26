@@ -9,6 +9,7 @@ class FooterController extends Controller
     public function indexAction()
     {
         $data = [];
+
         return $this->app->view('layout/footer', $data);
     }
 }
