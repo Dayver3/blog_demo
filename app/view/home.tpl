@@ -43,20 +43,12 @@ if ($topics) {
             <h2><?php echo $topic['title'] ?></h2>
             <p><?php echo $topic['content'] ?></p>
             <hr class="line">
-            <h3>Comments:</h3>
-            <br>
-            <?php foreach ($comments as $comment) { ?>
-            <?php if($comment['post_id'] == $topic['id']) { ?>
-            <div class="homeCommentDiv">
-                <h5><?php echo $comment['author'] ?>:</h5>
-                <p class="addedDate"><?php echo $comment['date_added'] ?></p>
-                <p><?php echo $comment['text'] ?></p>
-                <br>
-            </div>
-
-            <?php }
-                }
-            if ($logged) { ?>
+            <form method="post" action="comment/getComments?post_id=<?php echo $topic['id'] ?>" id="displayCommentsButton<?php  echo $topic['id'] ?>">
+                <input type="button" value="Show comments" class="homeCommentSubmit">
+            </form>
+            <div class="homeCommentDiv"></div>
+            <?php if ($logged) { ?>
+            <div id="homeCommentDiv" style="display: none">
             <hr class="line">
             <br>
             Add Comment
@@ -65,7 +57,7 @@ if ($topics) {
                 <input type="text" name="comment" id="<?php echo $topic['id'] ?>" class="commentInput">
                 <input type="button" class="homeCommentSubmit" value="Submit">
             </form>
-
+            </div>
             <?php } ?>
         </div>
         <?php

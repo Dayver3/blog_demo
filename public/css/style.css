@@ -244,8 +244,7 @@ p {
     border: 1px solid rgba(186, 182, 182, 0.58);
 }
 
-.homeCommentSubmit {
-    width: 10%;
+.homeCommentSubmit, .homeChildCommentSubmit {
     padding: 8px;
     margin: 2% 3% 3% auto;
     background-color: #5d95e6;
@@ -256,6 +255,10 @@ p {
 }
 
 .homeCommentDiv {
+
+}
+
+.displayCommentsButton {
 
 }
 

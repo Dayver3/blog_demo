@@ -10,7 +10,7 @@ class CommentModel extends Model
 {
     public function addComment($data)
     {
-        $sql = "INSERT INTO `comment` SET `post_id` = '" . (int)$data['post_id'] . "', `user_id` = '" . (int) $data['user_id'] . "', `author` = '" . $this->db->escape($data['author']) . "', `text` = '" . $this->db->escape(strip_tags($data['comment'])) . "', `date_added` = NOW()";
+        $sql = "INSERT INTO `comment` SET `post_id` = '" . (int)$data['post_id'] . "', `user_id` = '" . (int) $data['user_id'] . "', `author` = '" . $this->db->escape($data['author']) . "', `text` = '" . $this->db->escape(strip_tags($data['comment'])) . "', `date_added` = NOW(), `parent_id` = '" . (int)$data['parent_id'] . "'";
 
         $this->db->query($sql);
     }
@@ -50,6 +50,15 @@ class CommentModel extends Model
         $query = $this->db->query($sql);
 
         return $query->row['total'];
+    }
+
+    public function getCommentByPostId ($post_id)
+    {
+        $sql = "SELECT * FROM `comment` WHERE post_id = '" . (int)$post_id ."' ORDER BY `date_added`";
+
+        $query = $this->db->query($sql);
+
+        return $query->rows;
     }
 
 }
