@@ -9,7 +9,7 @@ class App
 
     public static function init($config)
     {
-        session_start();
+//        session_start();
         $app = core\App::getInstance();
 
         /**  Config init  */

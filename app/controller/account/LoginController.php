@@ -35,6 +35,7 @@ class LoginController extends Controller
 
         $data['error'] = $this->error;
 
+
         $this->app->get('response')->setOutput($this->app->view('account/login', $data));
     }
 

@@ -27,7 +27,7 @@ class CommentController extends Controller
 
     public function addCommentAction()
     {
-        $response_str= '';
+        $response_str = '';
         $data = $this->app->get('request')->post + $this->app->get('request')->get;
 //        var_dump($this->app->get('request')->post);
 //        var_dump($this->app->get('request')->get);
@@ -37,15 +37,15 @@ class CommentController extends Controller
         }
 
 //          var_dump($data);
-        echo json_encode($data);
-
+        $json = json_encode($data);
+        echo $json;
 
 
 //        $this->app->get('response')->redirect($this->app->get('url')->link('home'));
 
     }
 
-    public function getCommentsAction ()
+    public function getCommentsAction()
     {
         $post_id = $this->app->get('request')->get['post_id'];
         $comments = $this->app->model('comment')->getCommentByPostId($post_id);
@@ -59,25 +59,100 @@ class CommentController extends Controller
 //                $children[] = $this->getCommentsAction();
 //            }
 //        }
-       $arr = $this->recursiveAction($data['comments']);
-        $view = $this->app->view('content/comment', $data);
+        $data['answers'] = true;
+        $arr = [];
+        $arr['comments'] = $this->commentSort($data['comments']);
+//        $view = $this->commentRender($arr);
+        $view = $this->app->view('content/comment', $arr);
         echo $view;
-        return $view;
+//        return $view;
     }
 
-    private function recursiveAction ($data)
+    private function commentRender($comments, $i = 0)
     {
         $answers = [];
-        $a = 0;
-        foreach ($data as $datum) {
-            if ($datum['parent_id'] && $a < 3) {
-               $a++;
-               $answers[] = $datum;
-               $arr[] = $this->recursiveAction($answers);
-               $l = 0;
+        foreach ($comments as $comment) {
+            if ($comment['answers']) {
+                $this->commentRender($comment['answers']);
+                $answers[] = $this->app->view('content/comment', $comment);
+            } else {
+                    array_push($answers, $comment);
+                }
+            }
+
+        return $answers;
+
+
+//        $view = '';
+//        foreach ($comments as $comment) {
+//            if ($comment['answers']) {
+//                $view = $this->commentRender($comment['answers'], ++$i);
+//            } else {
+////                $comment['margin-left'] = $i * 10;
+//                $view .= $this->app->view('content/comment', $comment);
+//            }
+//        }
+//        return $view;
+    }
+
+    private function commentSort($comments, $child_parent_id = 0)
+    {
+        $answers = [];
+        foreach ($comments as $comment1) {
+            if ($comment1['parent_id'] == $child_parent_id) {
+
+                if ($comment1['answers'] = $this->commentSort($comments, $comment1['id'])) {
+                    $answers[] = $comment1;
+                } else {
+                    array_push($answers, $comment1);
+                }
+
             }
         }
-        $data['view'] = $answers;
-        return $data;
+
+        return $answers;
+    }
+
+    private function recursiveAction($comments, $post_id = 1, $iteration = 0)
+    {
+
+
+        $parent = [];
+//        foreach ($comments as $comment){
+////            if ($comment['id'] == $parent_id  and $inc <= 3){
+////                $comment['parent'] = $inc;
+////                $comment['answers'] = $this->recursiveAction($comments, $comment['parent_id'], ++$inc);
+////                array_push($parent, $comment);
+////            }
+//
+//            if ($comment['parent_id'] == $post_id && $iteration < 4) {
+//                $comment['answers'] = $this->recursiveAction($comments, $comment['id'], ++$iteration);
+//                array_push($parent, $comment);
+//            }
+//        }
+//        return $parent;
+
+//        $view_arr = [];
+//        $nesting = 0;
+////        $nesting_max = $i;
+//        foreach ($data as $datum) {
+////          $view_arr[] = $datum;
+//
+//        }
+//        return $view_arr;
+
+//        $arr = [];
+//        $answers = [];
+//        $nesting = $i;
+//        foreach ($data as $datum) {
+//            if ($datum['parent_id'] && $nesting < 3) {
+//               $nesting++;
+//               $answers[] = $datum;
+//               array_push($arr['answers'], $this->recursiveAction($answers, $nesting));
+//               $l = 0;
+//            }
+//        }
+//        $data['view'] = $answers;
+//        return $data;
     }
 }

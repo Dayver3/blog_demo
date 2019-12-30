@@ -55,23 +55,37 @@ $(function () {
                 childrenForms = $(".homeChildCommentSubmit");
                 // console.log(childrenForms);
 
-                childrenForms.each(function () {
-                    $(this).on('click', function () {
-                        // console.log( +(($(this).parent().attr('id')).match(/\d+/))[0]);
-                        $.post(
-                            $('.homeCommentForm').first().attr('action'),
-                            {
-                                parent_id: +(($(this).parent().attr('id')).match(/\d+/))[0],
-                                comment: $(this).siblings().val()
-                            },
-                            onAjaxSuccess()
-                        );
 
-                        function onAjaxSuccess(data) {
-                            console.log(data);
-                        }
-                    })
-                })
+                // childrenForms.each(function () {
+                //     $(this).on('click', function () {
+                //         // console.log( +(($(this).parent().attr('id')).match(/\d+/))[0]);      //TODO: 'regular expression';
+                //         $.post(
+                //             $('.homeCommentForm').first().attr('action'),
+                //             {
+                //                 parent_id: +(($(this).parent().attr('id')).match(/\d+/))[0],
+                //                 comment: $(this).siblings().val()
+                //             },
+                //             onAjaxSuccessFunc
+                //         );
+                //
+                //         function onAjaxSuccessFunc(data) {
+                //             let jsonObj = JSON.parse(data);
+                //             console.log(jsonObj);
+                //             let parent_post = $('#commentId' + jsonObj.parent_id);
+                //             let childPost = parent_post.clone();
+                //             childPost.attr('id', 'childrenComment' + jsonObj.parent_id);
+                //             childPost.children('#commentFormId' + jsonObj.parent_id).attr('id', 'childrenCommentFormId' + jsonObj.parent_id);
+                //             childPost.children('p').first().text(jsonObj.now_date);
+                //             childPost.children('p').last().text(jsonObj.comment);
+                //             childPost.children('h5').first().text(jsonObj.author);
+                //             childPost.css('margin-left', (childPost.css('margin-left') + 20) + 'px');
+                //             $('input[type = text]').val('');
+                //             parent_post.append(childPost);
+                //             console.log(+childPost.css('margin-left').match(/\d+/)[0]);
+                //             console.log(parent_post);
+                //         }
+                //     })
+                // })
 
 
                 // childrenForms.each(

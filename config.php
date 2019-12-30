@@ -9,7 +9,7 @@ return [
 
     // DB
     'db_hostname' => 'localhost',
-    'db_database' => 'demo',
+    'db_database' => 'test',
     'db_username' => 'root',
     'db_password' => '',
     'db_port' => 3306

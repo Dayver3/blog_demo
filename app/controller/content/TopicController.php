@@ -92,17 +92,17 @@ class TopicController extends Controller
 
     public function addCommentAction ()
     {
-//        var_dump($this->app->get('request')->get);
-//        $data = $this->app->get('request')->post + $this->app->get('request')->get;
-        var_dump($this->app->get('request')->post);
-        var_dump($_POST);
-        var_dump($_GET);
         var_dump($this->app->get('request')->get);
+        $data = $this->app->get('request')->post + $this->app->get('request')->get;
+//        var_dump($this->app->get('request')->post);
+//        var_dump($_POST);
+//        var_dump($_GET);
+//        var_dump($this->app->get('request')->get);
 
-//        $this->app->model('comment')->addComment();
+        $this->app->model('comment')->addComment();
 
 
-//        $this->app->get('response')->redirect($this->app->get('url')->link('home'));
+        $this->app->get('response')->redirect($this->app->get('url')->link('home'));
     }
 
 }
